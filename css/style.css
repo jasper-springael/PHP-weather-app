@@ -1,0 +1,45 @@
+body {
+  background-image: url(../images/background.jpeg);
+  background-size: cover;
+  color: red;
+}
+
+body h2 {
+  text-align: center;
+  font-size: 5em;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+}
+
+.top-side-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-result-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.first-result-1a {
+  text-align: center;
+  display: block;
+  min-width: 200px;
+  font-size: 3em;
+}
+
+.first-result-1b {
+  text-align: left;
+  display: flex;
+  min-width: 200px;
+  font-size: 1.5em;
+  justify-content: center;
+}
+/*# sourceMappingURL=style.css.map */
