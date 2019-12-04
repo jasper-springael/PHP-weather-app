@@ -89,7 +89,7 @@ h3 {
 }
 
 .input_text:hover {
-  background-color: rgba(23, 31, 28, 0.8);
+  background-color: rgba(144, 99, 155, 0.3);
 }
 
 .input_text:focus {
@@ -97,14 +97,19 @@ h3 {
 }
 
 .submit {
-  background: rgba(107, 66, 117, 0.7);
+  background: rgba(255, 202, 244, 0.1);
   border-radius: 2em;
   color: #fae3fa;
   border: rgba(23, 31, 28, 0.8);
 }
 
+::placeholder {
+  color: #e7dae7;
+}
+
 .submit:hover {
-  background-color: rgba(23, 31, 28, 0.8);
+  background-color: rgba(144, 99, 155, 0.3);
+  color: #fae3fa;
 }
 
 .top-side-2 {
@@ -265,7 +270,7 @@ footer {
     overflow-wrap: break-word;
   }
   .first-result-1a {
-    text-align: center;
+    text-align: right;
     font-size: 5em;
     height: 100%;
     width: 100%;
@@ -296,7 +301,7 @@ footer {
     font-size: 1.5rem;
   }
   .first-result-1a {
-    text-align: center;
+    text-align: right;
     font-size: 6em;
     height: 100%;
     width: 100%;

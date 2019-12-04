@@ -83,19 +83,24 @@ h3 {
     padding:5px;
 }
 .input_text:hover {
-    background-color:rgba(23, 31, 28, 0.8);
+    background-color:rgba(144, 99, 155, 0.3);
 }
 .input_text:focus {
     outline: thin dotted;
 }
 .submit {
-    background: rgba(107, 66, 117, 0.7);
+    background: rgba(255, 202, 244, 0.1);
     border-radius: 2em;
     color:rgb(250, 227, 250);
     border: rgba(23, 31, 28, 0.8);
 }
+::placeholder {
+    color:rgb(231, 218, 231);
+}
+
 .submit:hover {
-    background-color:rgba(23, 31, 28, 0.8);
+    background-color:rgba(144, 99, 155, 0.3);
+    color:rgb(250, 227, 250);
 }
 .top-side-2 {
     max-height:150px;
@@ -206,6 +211,7 @@ footer {
         word-spacing: 10px;
         font-size: 1.2em;
     }
+
     body h2{
         text-align:center;
         font-size:4em;
@@ -246,7 +252,7 @@ footer {
         overflow-wrap: break-word;
       }
     .first-result-1a {
-        text-align:center;
+        text-align:right;
         font-size: 5em;
         height:100%;
         width:100%;
@@ -278,7 +284,7 @@ footer {
     }
 
     .first-result-1a {
-        text-align:center;
+        text-align:right;
         font-size: 6em;
         height:100%;
         width:100%;

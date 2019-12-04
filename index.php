@@ -94,7 +94,7 @@
   <div class="top-side-container">
     <div class="top-side-1">
       <form action="" method="POST">
-        <input type="text" name="text" class="input_text">
+        <input type="text" name="text" class="input_text" placeholder="Insert your city.">
         <input type="submit" name="submit" class="submit" value="Search">
       </form>
     </div>
