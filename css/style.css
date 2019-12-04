@@ -1,45 +1,305 @@
 body {
-  background-image: url(../images/background.jpeg);
+  background-image: url(../images/background1.jpeg);
   background-size: cover;
-  color: red;
+  color: #f0f5f3;
+  font-size: 1em;
 }
 
-body h2 {
+h2 {
   text-align: center;
-  font-size: 5em;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(18, 2, 22, 0.2);
+  padding: 20px;
+  font-family: "open-sans";
+  font-weight: lighter;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(130, 77, 143, 0.2);
+  padding: 10px;
+  font-family: "open-sans";
+  font-weight: lighter;
 }
 
 .container {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  max-width: 700px;
+  max-width: 600px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: #355C7D;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin-top: 60px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  overflow-wrap: break-word;
 }
 
 .top-side-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-height: fit-content;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.top-side-1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: auto;
+}
+
+.input_text {
+  display: inline;
+  margin: 0.2em;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: inherit;
+  line-height: 1em;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: rgba(87, 70, 92, 0.8);
+  padding: 5px;
+}
+
+.input_text:hover {
+  background-color: rgba(23, 31, 28, 0.8);
+}
+
+.input_text:focus {
+  outline: thin dotted;
+}
+
+.submit {
+  background: rgba(107, 66, 117, 0.7);
+  border-radius: 2em;
+  color: #fae3fa;
+  border: rgba(23, 31, 28, 0.8);
+}
+
+.submit:hover {
+  background-color: rgba(23, 31, 28, 0.8);
+}
+
+.top-side-2 {
+  max-height: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .first-result-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .first-result-1a {
   text-align: center;
-  display: block;
-  min-width: 200px;
-  font-size: 3em;
+  font-size: 4em;
+  height: 100%;
+  width: 100%;
+}
+
+.first-result-1a p {
+  margin: 0;
 }
 
 .first-result-1b {
-  text-align: left;
   display: flex;
-  min-width: 200px;
-  font-size: 1.5em;
-  justify-content: center;
+  width: 100%;
+  font-size: 1em;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+}
+
+.first-result-1b img {
+  width: 50px;
+}
+
+.first-result-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: space-evenly;
+  word-spacing: 10px;
+  font-size: 1.2em;
+  word-wrap: break-word;
+}
+
+.results {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: rgba(255, 202, 244, 0.1);
+}
+
+footer {
+  font-size: 0.75em;
+  padding-left: 5px;
+  display: block;
+  background: rgba(144, 99, 155, 0.4);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+
+@media (min-width: 420px) {
+  .first-result-1a {
+    text-align: center;
+    font-size: 4em;
+    height: 100%;
+    width: 100%;
+  }
+  .first-result-1b {
+    display: flex;
+    width: 100%;
+    font-size: 1.5em;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: inherit;
+  }
+  .first-result-2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+    word-spacing: 10px;
+    font-size: 1.2em;
+    word-wrap: break-word;
+  }
+  .first-result-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .first-result-2 {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+    word-spacing: 10px;
+    font-size: 1.2em;
+  }
+  body h2 {
+    text-align: center;
+    font-size: 4em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .first-result-1b {
+    display: flex;
+    width: 100%;
+    font-size: 2em;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: inherit;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url(../images/background1.jpeg);
+    background-size: cover;
+    color: #f0f5f3;
+    font-size: 1.2rem;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: #355C7D;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-top: 60px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    overflow-wrap: break-word;
+  }
+  .first-result-1a {
+    text-align: center;
+    font-size: 5em;
+    height: 100%;
+    width: 100%;
+  }
+  .results img {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 77.2px;
+  }
+  footer {
+    font-size: 0.75em;
+    padding-left: 5px;
+    display: block;
+    background: rgba(144, 99, 155, 0.3);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1216px) {
+  body {
+    background-image: url(../images/background1.jpeg);
+    background-size: cover;
+    color: #f0f5f3;
+    font-size: 1.5rem;
+  }
+  .first-result-1a {
+    text-align: center;
+    font-size: 6em;
+    height: 100%;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

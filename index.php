@@ -24,6 +24,9 @@
       $message=$result['message'];
 
       if ($message ==null) {
+        echo("<h2>");
+        echo(ucfirst($city));
+        echo("</h2>");
         $length=count($result['list']);
         ChromePhp::log($length);
         ChromePhp::log($result['list'][0]['main']['temp']);
@@ -39,26 +42,38 @@
         // div 1
         echo("<div class=\"first-result-container\">");
         echo("<div class=\"first-result-1a\">");
-        echo($result['list'][0]['main']['temp']);
+        echo("<p>");
+        echo(round($result['list'][0]['main']['temp'],1)."&deg");
+        echo("</p>");
         echo("</div>");
         echo("<div class=\"first-result-1b\">");
         echo("<img src=http://openweathermap.org/img/w/".$icons.".png></img>");
-        echo($result['list'][0]['weather'][0]['description'].' ');
+        echo(ucfirst($result['list'][0]['weather'][0]['description'].' '));
         echo("</div>");
         echo("</div>");
         // einde div 1
         echo("<div class=\"first-result-2\">");
-        echo(max($maxTemps));
-        echo(min($minTemps));
-        echo($result['list'][0]['main']['humidity'].' ');
-        echo($result['list'][0]['wind']['speed'].' ');
+        echo("<p>");
+        echo(round(max($maxTemps),1)."&deg"),"/",(round(min($minTemps),1)."&deg");
+        echo("</p>");
+        echo("<p>");
+        echo("Humidity: ".$result['list'][0]['main']['humidity'].' ');
+        echo("</p>");
+        echo("<p>");
+        echo("Windspeed: ".$result['list'][0]['wind']['speed'].' ');
+        echo("</p>");
         echo("</div>");
+        echo("<h3>");
+        echo("Next four days:");
+        echo("</h3>");
         for($i=8;$i<$length;$i+=8) {
         echo("<div class=\"results\">");
-        echo($result['list'][$i]['main']['temp'].' ');
-        echo($result['list'][$i]['main']['temp_min']);
-        echo($result['list'][$i]['main']['temp_max']);
-        echo($result['list'][$i]['weather'][0]['description'].' ');
+        echo("<p>");
+        echo(round($result['list'][$i]['main']['temp'],1)."&deg");
+        echo("</p>");
+        echo("<p>");
+        echo(ucfirst($result['list'][$i]['weather'][0]['description'].' '));
+        echo("</p>");
         $icons= $result['list'][$i]['weather'][0]['icon'];
         echo("<img src=http://openweathermap.org/img/w/".$icons.".png></img>");
         echo("</div>");
@@ -76,27 +91,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Cloud weather app</title>
+    <meta name="description" content="Cloud weather app, find your city's current temperature and 5 day forecast.">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200|Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container">
+  <h1> Cloud app </h1>
   <div class="top-side-container">
-    <div class="top-side">
+    <div class="top-side-1">
       <form action="" method="POST">
-        <input type="text" name="text">
-        <input type="submit" name="submit">
+        <input type="text" name="text" class="input_text">
+        <input type="submit" name="submit" class="submit" value="Search">
       </form>
     </div>
-    <div class="top-side-2">
-    <h2>Gent</h2>
-    </div>
   </div>
+  <div class="container-app">
       <?php
       if (isset($_POST['submit'])) {
         getData();
       };
       ?>
+  </div>
+    <footer>
+          <div class="copyright">
+            <p>&copy; 2019 - Kosmonaut</p>
+          </div>
+  </footer>
 </div>
 </body>
 </html> 
