@@ -19,8 +19,6 @@
       $err = curl_error($curl);
       curl_close($curl);
       $result =json_decode($response, true);
-      ChromePhp::log($result);
-
       $message=$result['message'];
 
       if ($message ==null) {
@@ -28,18 +26,13 @@
         echo(ucfirst($city));
         echo("</h2>");
         $length=count($result['list']);
-        ChromePhp::log($length);
-        ChromePhp::log($result['list'][0]['main']['temp']);
         $minTemps = array ();
         $maxTemps = array ();
         for ($i=0;$i<8;$i++) {
           array_push($minTemps,$result['list'][$i]['main']['temp_min']);
           array_push($maxTemps,$result['list'][$i]['main']['temp_max']);
         }
-        ChromePhp::log($minTemps);
-        ChromePhp::log($maxTemps);
         $icons= $result['list'][$i]['weather'][0]['icon'];
-        // div 1
         echo("<div class=\"first-result-container\">");
         echo("<div class=\"first-result-1a\">");
         echo("<p>");
@@ -51,7 +44,6 @@
         echo(ucfirst($result['list'][0]['weather'][0]['description'].' '));
         echo("</div>");
         echo("</div>");
-        // einde div 1
         echo("<div class=\"first-result-2\">");
         echo("<p>");
         echo(round(max($maxTemps),1)."&deg"),"/",(round(min($minTemps),1)."&deg");
